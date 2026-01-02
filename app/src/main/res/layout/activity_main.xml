@@ -11,7 +11,7 @@
         android:id="@+id/game_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/scoreText"
@@ -31,30 +31,38 @@
             android:layout_alignParentEnd="true"
             android:layout_margin="16dp">
 
-            <ImageView android:id="@+id/heart1" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_heart"/>
-            <ImageView android:id="@+id/heart2" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_heart"/>
-            <ImageView android:id="@+id/heart3" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_heart"/>
+            <ImageView android:id="@+id/heart1" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_heart"/>
+            <ImageView android:id="@+id/heart2" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_heart"/>
+            <ImageView android:id="@+id/heart3" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_heart"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lanesContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/livesContainer"
             android:layout_above="@id/controlsContainer"
             android:orientation="horizontal"
-            android:weightSum="3">
-
-            <RelativeLayout android:id="@+id/lane_0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                <ImageView android:id="@+id/player_lane_0" android:layout_width="60dp" android:layout_height="80dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="invisible"/>
-            </RelativeLayout>
+            android:weightSum="5"> <RelativeLayout android:id="@+id/lane_0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/player_lane_0" android:layout_width="50dp" android:layout_height="70dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="invisible"/>
+        </RelativeLayout>
 
             <RelativeLayout android:id="@+id/lane_1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                <ImageView android:id="@+id/player_lane_1" android:layout_width="60dp" android:layout_height="80dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="visible"/>
+                <ImageView android:id="@+id/player_lane_1" android:layout_width="50dp" android:layout_height="70dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="invisible"/>
             </RelativeLayout>
 
             <RelativeLayout android:id="@+id/lane_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                <ImageView android:id="@+id/player_lane_2" android:layout_width="60dp" android:layout_height="80dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="invisible"/>
+                <ImageView android:id="@+id/player_lane_2" android:layout_width="50dp" android:layout_height="70dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="visible"/>
             </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/lane_3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:id="@+id/player_lane_3" android:layout_width="50dp" android:layout_height="70dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/lane_4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:id="@+id/player_lane_4" android:layout_width="50dp" android:layout_height="70dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:src="@drawable/ic_spaceship" android:visibility="invisible"/>
+            </RelativeLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -63,13 +71,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="center"
-            android:padding="20dp">
+            android:padding="20dp"
+            android:visibility="visible">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/btn_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="80dp"
                 app:backgroundTint="#4CAF50"
                 android:src="@android:drawable/ic_media_previous"
                 android:contentDescription="Left" />
@@ -78,53 +87,12 @@
                 android:id="@+id/btn_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="80dp"
                 app:backgroundTint="#4CAF50"
                 android:src="@android:drawable/ic_media_next"
                 android:contentDescription="Right" />
         </LinearLayout>
     </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_start"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#D9000000"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="30dp"
-        android:clickable="true"
-        android:focusable="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GALACTIC DODGE"
-            android:textColor="#FFD700"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="40dp"/>
-
-        <EditText
-            android:id="@+id/input_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Your Name"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#AAAAAA"
-            android:backgroundTint="#FFFFFF"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginBottom="20dp"/>
-
-        <Button
-            android:id="@+id/btn_start_game"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:text="START GAME"
-            android:textSize="20sp"
-            android:backgroundTint="#2196F3"/>
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/layout_game_over"
@@ -159,16 +127,10 @@
             android:id="@+id/btn_restart"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="PLAY AGAIN"
-            android:backgroundTint="#4CAF50"
+            android:text="BACK TO MENU"
+            android:backgroundTint="#2196F3"
             android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:id="@+id/btn_exit"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="EXIT"
-            android:backgroundTint="#F44336"/>
     </LinearLayout>
 
 </RelativeLayout>

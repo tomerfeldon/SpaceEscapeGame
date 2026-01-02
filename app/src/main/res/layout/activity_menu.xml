@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_space"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPACE ESCAPE"
+        android:textColor="#FFD700"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:layout_marginBottom="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHOOSE MODE:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_mode_slow"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="BUTTONS (SLOW)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btn_mode_fast"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="BUTTONS (FAST)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#F44336"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btn_mode_sensor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="SENSORS (TILT)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btn_high_scores"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="HIGH SCORES 🏆"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:backgroundTint="#FFC107"/>
+
+</LinearLayout>
